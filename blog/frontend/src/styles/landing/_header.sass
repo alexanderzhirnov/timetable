@@ -1,0 +1,128 @@
+.b-landing
+  .b-header
+    font-size: 1.125rem
+    background-color: #012D4F
+    box-shadow: 0 0 0.875rem rgba(0, 0, 0, 0.7)
+    overflow: hidden
+
+  .b-header-inner,
+  .b-content-inner
+    max-width: 80rem
+    width: 96%
+    margin: auto
+
+  .b-header-first
+    display: flex
+    flex-direction: row
+    height: 6rem
+    padding: 1rem 0
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid rgba(222, 222, 222, 0.25)
+
+  .b-header-logo
+    font-size: 2rem
+    color: white
+    letter-spacing: .3rem
+    +respond-mobile()
+      font-size: 1.5rem
+
+    span:last-child
+      font-weight: bold
+
+  .b-header-enter-button
+    width: 10rem
+    font-size: 0.8rem
+    font-weight: 700
+    border-radius: 1.563rem
+    padding: 0.5rem
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    justify-content: center
+    text-decoration: none
+    cursor: pointer
+    background-color: $light-yellow
+    color: #F47C00
+    text-decoration: none
+    transition: background-color .2s
+
+    &:hover
+      background-color: white
+
+  .b-header-links
+    display: flex
+    flex-direction: row
+    align-items: center
+    +respond-mobile()
+      > a
+        display: none !important
+
+        &:last-child
+          display: flex !important
+
+  .b-header-link
+    color: #A4BDD2
+    text-decoration: none
+    cursor: pointer
+    transition: color .2s
+
+    &:hover
+      color: white
+
+  .b-header-second
+    padding-top: 3rem
+    background-image: linear-gradient(0deg, #487BA4, #012D4F)
+    color: white
+
+    .titles
+      text-align: center
+
+      .title1
+        font-size: 2rem
+
+      .title2
+        margin-top: 1rem
+
+  .b-header-buttons-main
+    +respond-mobile()
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .b-header-button
+        margin-left: 0 !important
+
+  .b-header-button
+    margin-top: 2rem
+    font-size: 1rem
+    font-weight: 700
+    text-transform: uppercase
+    background-color: #1595e8
+    border-radius: 3.125rem
+    width: 17rem
+    padding: 0.8rem
+    text-decoration: none
+    border: none
+    color: white
+    display: inline-block
+    cursor: pointer
+    transition: background-color .2s
+
+    &:hover
+      background-color: #1fa7ff
+
+    &.orange
+      background-color: #EF7C15
+
+      &:hover
+        background-color: #fb851b
+
+  .b-header-table-img
+    margin-top: 5rem
+    display: block
+    margin-right: auto
+    margin-left: auto
+    max-width: 80%
+    vertical-align: middle
+    box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.4)

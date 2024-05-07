@@ -1,0 +1,29 @@
+.b-docs-group-images
+  .b-docs-group-images-row
+    display: flex
+    flex-direction: row
+    width: 100%
+    margin-top: 1px
+
+    img:not(:first-child),
+    .wrap:not(:first-child)
+      margin-left: 1px
+
+    img
+      height: 160px
+      flex: 0 0 auto
+      width: auto
+
+    .wrap
+      display: flex
+      justify-content: center
+      overflow: hidden
+
+      &.flex-end
+        justify-content: flex-end
+
+      &.flex-start
+        justify-content: flex-start
+
+      img
+        max-width: none

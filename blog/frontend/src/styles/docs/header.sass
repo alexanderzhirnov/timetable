@@ -1,0 +1,70 @@
+.b-docs-header
+  position: fixed
+  top: 0
+  color: white
+  height: 60px
+  width: 100%
+  z-index: 10
+  display: flex
+  flex-direction: row
+  padding: 0 25px
+  box-shadow: 0 0 1px rgba(0,0,0,0.25)
+  transition: background-color 0.3s ease-in-out
+  background-image: linear-gradient(0deg, #487BA4, #012D4F)
+  align-items: center
+
+  i
+    cursor: pointer
+
+  .navigation
+    display: flex
+    flex-direction: row
+    margin-left: auto
+    align-items: center
+
+    a
+      color: white !important
+
+    .button
+      background-color: #EF7C15
+      border-radius: 3.125rem
+      padding: 0.5rem 1rem
+      text-decoration: none
+      border: none
+      color: white
+      display: inline-block
+      cursor: pointer
+      transition: background-color .2s
+      white-space: nowrap
+      +respond-mobile()
+        display: none
+
+      &:hover
+        background-color: #fb851b
+
+.b-docs-header-logo
+  display: block
+  line-height: 40px
+  font-weight: 900
+  color: white
+  letter-spacing: .3125rem
+  font-size: 1.2rem
+  color: white !important
+  text-decoration: none !important
+
+  .black
+    color: white !important
+
+.b-docs-header-toggle
+  position: relative
+  top: 1px
+  padding-right: 20px
+  font-size: 20px
+  display: none
+
+@media only screen and (max-width: 768px)
+  .b-docs-header
+    padding: 0 10px
+
+  .b-docs-header-toggle
+    display: inline !important

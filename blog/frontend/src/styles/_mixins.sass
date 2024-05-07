@@ -1,0 +1,47 @@
+$sceenXSWidth: 768px
+$sceenSMWidth: 768px
+$sceenMDWidth: 992px
+$sceenLGWidth: 1200px
+
+=respond-to($media)
+  @if $media == xs
+    @media only screen and (max-width: $sceenXSWidth - 1)
+      @content
+  @else if $media == sm
+    @media only screen and (min-width: $sceenSMWidth)
+      @content
+  @else if $media == md
+    @media only screen and (min-width: $sceenMDWidth)
+      @content
+  @else if $media == lg
+    @media only screen and (min-width: $sceenLGWidth)
+      @content
+  @else if $media == print
+    @media only print
+      @content
+
+=respond-to-min($minWidth)
+  @media only screen and (min-width: $minWidth)
+    @content
+
+=respond-to-max($maxWidth)
+  @media only screen and (max-width: $maxWidth)
+    @content
+
+=respond-mobile()
+  @media only screen and (max-width: $sceenXSWidth - 1)
+    @content
+
+=link-color($color)
+  color: $color
+
+  &:hover,
+  &:link,
+  &:visited,
+  &:active
+    color: $color
+
+=text-overflow()
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

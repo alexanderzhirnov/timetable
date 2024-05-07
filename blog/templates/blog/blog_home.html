@@ -1,6 +1,8 @@
 {% load humanize %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,72 +12,73 @@
     <meta name="description" content="Полезные статьи и обзоры по составлению расписания на mstimetables.ru" />
     <base href="/" />
 
-    
-
-    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
-
-    <link rel="stylesheet" href="/bundles/site.css" />
+    <link rel="stylesheet" href="{% static 'front-awsome/css/font-awesome.min.css' %}?v={{ STATIC_VERSION }}" />
+    <link rel="stylesheet" href="{% static 'frontend/style.css' %}?v={{ STATIC_VERSION }}" />
 </head>
+
 <body>
-   
-    
-<div class="b-docs-header">
-    <a class="b-docs-header-logo" href="/">
-        <span>TIME</span><span class="black">TABLE</span>
-    </a>
 
-    <div class="navigation">
-        <a href="/docs">Документация</a>
-        <a class="m-l-1 button" href="//apps.mstimetables.ru/registration">Попробовать бесплатно</a>
-    </div>
-</div>
 
-<div class="l-page l-blog l-blog-pages">
-    <div class="breadcrumbs">
-        <a href="/">Главная</a>
-        &nbsp;/&nbsp;
-        <span>Блог</span>
-    </div>
-    {% for post in posts %}
-    <div class="l-page-content ">
-        <div class="blog-row">
-            <img src="{{ post.image.url }}" alt="Автоматическое составление расписания: преимущества"/>
-        <div class="blog-desc"><h2><a href="blog/{{ post.slug }}">{{ post.title }} </a></h2>
-<p>{{ post.short_description }}</p></div>
-        </div>
-        <div class="sub-sep">
-            <span>{{ post.created_at|date:"d F Y" }}</span>
-            <i class="fa fa-eye m-l-1"></i>&nbsp;&nbsp;
-            <span>{{ post.views }}</span>
-            <a class="b-link next-link" rel="nofollow" href="/blog/{{ post.slug }}">Читать далее &#8594;</a>
+    <div class="b-docs-header">
+        <a class="b-docs-header-logo" href="/">
+            <span>TIME</span><span class="black">TABLE</span>
+        </a>
+
+        <div class="navigation">
+            <a href="/docs">Документация</a>
+            <a class="m-l-1 button" href="//apps.mstimetables.ru/registration">Попробовать бесплатно</a>
         </div>
     </div>
-{% endfor %}
 
-    <div class="m-t-3"></div>
-    <div class="b-footer-main">
-    <div class="b-footer-first">
-        <a class="logo" href="https://www.mstimetables.ru/"><span>TIME</span><span>TABLE</span></a>
-        <div class="actions">
-            <div class="column">
-                <a class="action" target="_blank" href="https://www.mstimetables.ru/docs">Документация</a>
-                <!--<a class="action" asp-controller="Contract" asp-action="ContractFree">Пользовательское соглашение</a> -->
-                <a class="action" href="https://www.mstimetables.ru/about">О нас</a>
+    <div class="l-page l-blog l-blog-pages">
+        <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            &nbsp;/&nbsp;
+            <span>Блог</span>
+        </div>
+        {% for post in posts %}
+        <div class="l-page-content ">
+            <div class="blog-row">
+                <img src="{{ post.image.url }}" alt="Автоматическое составление расписания: преимущества" />
+                <div class="blog-desc">
+                    <h2><a href="blog/{{ post.slug }}">{{ post.title }} </a></h2>
+                    <p>{{ post.short_description }}</p>
+                </div>
             </div>
-            <div class="column">
-                <a class="action" href="https://www.mstimetables.ru/privacy-policy">Политика конфеденциальности</a>
-                <a class="action" href="mailto:support@mstimetables.ru">Техподдержка: support@mstimetables.ru</a>
+            <div class="sub-sep">
+                <span>{{ post.created_at|date:"d F Y" }}</span>
+                <i class="fa fa-eye m-l-1"></i>&nbsp;&nbsp;
+                <span>{{ post.views }}</span>
+                <a class="b-link next-link" rel="nofollow" href="/blog/{{ post.slug }}">Читать далее &#8594;</a>
             </div>
         </div>
-    </div>
+        {% endfor %}
 
-    <div class="b-footer-subline">
-        <div>2016 - 2024 © Timetable, All Rights Reserved.</div>
-    </div>
-</div>
-</div> 
+        <div class="m-t-3"></div>
+        <div class="b-footer-main">
+            <div class="b-footer-first">
+                <a class="logo" href="https://www.mstimetables.ru/"><span>TIME</span><span>TABLE</span></a>
+                <div class="actions">
+                    <div class="column">
+                        <a class="action" target="_blank" href="https://www.mstimetables.ru/docs">Документация</a>
+                        <!--<a class="action" asp-controller="Contract" asp-action="ContractFree">Пользовательское соглашение</a> -->
+                        <a class="action" href="https://www.mstimetables.ru/about">О нас</a>
+                    </div>
+                    <div class="column">
+                        <a class="action" href="https://www.mstimetables.ru/privacy-policy">Политика
+                            конфеденциальности</a>
+                        <a class="action" href="mailto:support@mstimetables.ru">Техподдержка:
+                            support@mstimetables.ru</a>
+                    </div>
+                </div>
+            </div>
 
-    <script src="/bundles/site."></script>
+            <div class="b-footer-subline">
+                <div>2016 - 2024 © Timetable, All Rights Reserved.</div>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>

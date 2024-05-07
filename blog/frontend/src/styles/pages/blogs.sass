@@ -1,0 +1,96 @@
+.l-blog
+  .l-page-content,
+  .breadcrumbs
+    width: 100%
+    max-width: 56.25rem
+
+  p
+    line-height: 1.375rem
+
+  .breadcrumbs
+    +respond-mobile()
+      padding: 10px 10px
+
+  .l-page-content
+    +respond-mobile()
+      padding: 15px
+
+@media screen and (min-width: 1921px)
+  .l-blog
+    .l-page-content,
+    .breadcrumbs
+      max-width: 59.25rem
+
+
+.l-blog-pages
+  .l-page-content
+    text-decoration: none !important
+    color: #333
+    transition: box-shadow 0.2s ease-in-out
+
+    .blog-row
+      display: flex
+      flex-direction: row
+
+    .b-link
+      color: #337ab7
+      text-align: right
+
+      &:hover
+        text-decoration: underline
+
+    .blog-desc
+      position: relative
+      top: -5px
+
+.l-blog-pages,
+.l-blog
+  li
+    display: list-item
+    font-size: inherit
+    line-height: 1.375rem
+
+  .b-link.next-link
+    margin-left: auto
+
+  a
+    color: #337ab7
+    text-align: right
+
+    &:hover
+      text-decoration: underline
+
+  .sub-sep
+    color: #9d9d9d
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  h1
+    font-size: 1.4rem
+
+  h2
+    font-size: 1.225rem
+
+.l-blog
+  .blog-img
+    float: left
+    width: 174px
+    height: 122px
+    margin-right: 1rem !important
+
+  p
+    text-align: justify
+
+.l-blog-pages
+  .blog-img
+    float: none
+    flex: 0 0 auto
+    width: 180px
+    height: 129px
+    margin-right: 1.25rem !important
+    margin-bottom: 10px
+
+  .blog-desc
+    > p:last-child
+      margin-bottom: 0

@@ -1,0 +1,122 @@
+$text-color: #34495e
+$link-active-color: white
+$sidebar-width: 16rem
+$link-color: #0776cb
+$sidebar-background: #f2f2f2
+
+@import "sidebar"
+@import "changelog"
+@import "header"
+
+.b-docs
+  position: relative
+  padding-left: $sidebar-width
+  color: #34495e
+  font-family: "proxima_nova_rg", Arial
+  font-size: 15px
+
+  p
+    line-height: 1.6rem
+    text-align: justify
+
+    div,
+    footer
+      text-align: justify
+
+  h2
+    font-size: 1.875rem
+
+  h3
+    font-size: 1.5rem
+
+  h4
+    font-size: 1.1rem
+
+  .page-header
+    font-weight: bold
+
+    &.first
+      margin-top: 25px
+
+  .b-anchor
+    border-bottom: 1px solid #E5E5E5
+    padding-bottom: 10px
+    font-weight: 700
+    color: #34495e
+    font-size: 22px
+    margin-bottom: 20px
+
+.b-docs-content-wrap
+  overflow-y: auto
+  width: 100%
+  height: 100%
+
+.b-docs-content
+  max-width: 660px
+  margin: 0 auto
+  font-size: 1rem
+  padding: 60px 10px 10px
+
+  img
+    max-width: 100%
+
+    &:hover
+      cursor: zoom-in
+
+  blockquote
+    margin-top: 20px
+
+  ul,
+  ol
+    padding-left: 17px
+
+    li
+      text-align: justify
+
+
+  ul
+    li
+      list-style-type: disc
+
+.m-t-1
+  margin-top: 1rem
+
+.b-docs-footer-links
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  font-size: 14px
+  border-bottom: 1px solid #e0e0e0
+  margin-top: 2.5rem
+  margin-bottom: 50px
+  padding-bottom: 1rem
+
+  &.right
+    justify-content: flex-end
+
+  a
+    &:hover
+      text-decoration: none
+
+.b-docs-registration-img
+  max-width: 400px !important
+
+
+.b-docs
+  .b-table
+    td
+      vertical-align: middle
+      border-top: 0
+
+      &:first-child
+        border-radius: 6px 0 0 6px
+
+      &:last-child
+        border-radius: 0 6px 6px 0
+
+    tr:first-child
+      td
+        font-weight: bold
+
+    tr:nth-child(odd)
+      background-color: #F7F7F7

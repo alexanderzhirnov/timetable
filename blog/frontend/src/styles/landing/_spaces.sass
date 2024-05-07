@@ -1,0 +1,78 @@
+$baseline_rem: 16
+
+@function strip-unit($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return $number / ($number * 0 + 1)
+
+  @return $number
+
+// Переводим px в rem
+@function rem($values)
+  $rem_values: ()
+
+  @each $value in $values
+    @if ($value == 0)
+      $rem_values: append($rem_values, $value)
+    @else
+      $rem_values: append($rem_values, (strip-unit($value) / $baseline_rem) * 1rem)
+
+  @if length($rem_values) == 1
+    @return first($rem_values)
+  @else
+    @return $rem_values
+
+$step: 0.5
+$i: -$step
+
+@while $i < 30
+  $i: $i + $step
+  $l: $i
+
+  @if (floor($i) != ceil($i))
+    $l: #{floor($i)}_5
+
+  // margin
+  .m-x-#{$l}
+    margin-left: #{$i}rem !important
+    margin-right: #{$i}rem !important
+
+  .m-y-#{$l}
+    margin-top: #{$i}rem !important
+    margin-bottom: #{$i}rem !important
+
+  .m-t-#{$l}
+    margin-top: #{$i}rem !important
+
+  .m-r-#{$l}
+    margin-right: #{$i}rem !important
+
+  .m-b-#{$l}
+    margin-bottom: #{$i}rem !important
+
+  .m-l-#{$l}
+    margin-left: #{$i}rem !important
+
+  // bottom
+  .p-x-#{$l}
+    padding-left: #{$i}rem !important
+    padding-right: #{$i}rem !important
+
+  .p-y-#{$l}
+    padding-top: #{$i}rem !important
+    padding-bottom: #{$i}rem !important
+
+  .p-t-#{$l}
+    padding-top: #{$i}rem !important
+
+  .p-r-#{$l}
+    padding-right: #{$i}rem !important
+
+  .p-b-#{$l}
+    padding-bottom: #{$i}rem !important
+
+  .p-l-#{$l}
+    padding-left: #{$i}rem !important
+
+  // font-size
+  .f-#{$l}
+    font-size: #{$i}rem !important

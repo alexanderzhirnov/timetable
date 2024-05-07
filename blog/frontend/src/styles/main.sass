@@ -1,0 +1,39 @@
+@import "_mixins"
+@import "landing/spaces"
+@import "./variables"
+
+html
+  font-size: 16px
+  font-family: Arial, sans-serif
+  height: 100%
+
+body
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  height: 100%
+
+.g-clear_both
+  clear: both
+
+.b-block--center
+  width: 70rem
+  margin: 0 auto
+
+@import "landing/styles"
+@import "docs/styles"
+
+@import "pages/pages"
+@import "pages/about"
+@import "pages/footer"
+@import "pages/blogs"
+
+body
+  background: red
+
+.visible-mb
+  display: none
+
+@media screen and (max-width: 768px)
+  .visible-mb
+    display: block
