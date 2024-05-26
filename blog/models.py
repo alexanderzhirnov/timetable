@@ -17,7 +17,7 @@ class Post(models.Model):
 
 class PageVisit(models.Model):
     page_id = models.IntegerField()
-    sesion_id = models.UUIDField()
+    session_id = models.UUIDField(null=True)
     date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
