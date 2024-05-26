@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from django.http import HttpResponse
 import uuid
 
@@ -10,6 +11,7 @@ class SessionIdMiddleware:
 
         # Add a cookie to the response
         if 'session_id' not in request.COOKIES:
-            response.set_cookie('session_id', uuid.uuid4())
+            expiration_date = datetime.now() + timedelta(days=365)
+            response.set_cookie('session_id', uuid.uuid4(), expires=expiration_date)
 
         return response
