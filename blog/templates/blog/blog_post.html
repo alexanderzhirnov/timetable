@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Blog Home</title>
-</head>
-<body>
+{% extends "../base-posts.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="l-page">
     <h1>Blog</h1>
-    <div> {{ post.description|safe }}
-    </div> 
-</body>
-</html>
+    <div> {{ post.description|safe }}</div>
+</div>
+{% endblock %}

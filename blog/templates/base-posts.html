@@ -1,0 +1,60 @@
+{% load humanize %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="Полезные статьи и обзоры по составлению расписания на mstimetables.ru" />
+    <base href="/" />
+
+    <link rel="stylesheet" href="{% static 'front-awsome/css/font-awesome.min.css' %}?v={{ STATIC_VERSION }}" />
+    <link rel="stylesheet" href="{% static 'frontend/style.css' %}?v={{ STATIC_VERSION }}" />
+</head>
+
+<body>
+
+
+    <div class="b-docs-header">
+        <a class="b-docs-header-logo" href="/">
+            <span>TIME</span><span class="black">TABLE</span>
+        </a>
+
+        <div class="navigation">
+            <a href="/docs">Документация</a>
+            <a class="m-l-1 button" href="//apps.mstimetables.ru/registration">Попробовать бесплатно</a>
+        </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <div class="b-footer-main">
+      <div class="b-footer-first">
+          <a class="logo" href="https://www.mstimetables.ru/"><span>TIME</span><span>TABLE</span></a>
+          <div class="actions">
+              <div class="column">
+                  <a class="action" target="_blank" href="https://www.mstimetables.ru/docs">Документация</a>
+                  <!--<a class="action" asp-controller="Contract" asp-action="ContractFree">Пользовательское соглашение</a> -->
+                  <a class="action" href="https://www.mstimetables.ru/about">О нас</a>
+              </div>
+              <div class="column">
+                  <a class="action" href="https://www.mstimetables.ru/privacy-policy">Политика
+                      конфеденциальности</a>
+                  <a class="action" href="mailto:support@mstimetables.ru">Техподдержка:
+                      support@mstimetables.ru</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="b-footer-subline">
+          <div>2016 - 2024 © Timetable, All Rights Reserved.</div>
+      </div>
+  </div>
+
+</body>
+
+</html>
